@@ -1,0 +1,15 @@
+{
+  "short_name": "Planes de Estudio",
+  "name": "Planes de Estudio",
+  "icons": [
+    {
+      "src": "favicon.png",
+      "sizes": "480x480",
+      "type": "image/ico"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#191C25",
+  "background_color": "#191C25"
+}

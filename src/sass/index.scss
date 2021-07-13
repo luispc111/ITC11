@@ -1,0 +1,183 @@
+@import './_variables';
+@import './_plan-de-estudio.scss';
+@import './_barra-progreso.scss';
+@import './shared.scss';
+@import './_fondos';
+
+* {
+  color: white;
+}
+
+.react-toast-notifications__toast__content {
+  color: black;
+}
+
+html {
+  height: 100%;
+}
+
+body, #root, .App {
+  min-height: 100%;
+  height: 100%;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+}
+
+body {
+  background-color: $fondo-app;
+  margin: 0px 20px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.centerImage {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  /* width: 50%; */
+}
+
+.selectStudyPlan {
+  margin: 10px 5px;
+  width: 140px;
+  height: 55px;
+  font-size: 25px;
+}
+
+.boton-carrera {
+  width: 8.5rem;
+  font-size: 1.5rem;
+}
+
+.loading-logo {
+  img {
+    animation: loading-logo-spin infinite 2s linear;
+    margin: 0 auto;
+    width: 10em;
+  }
+
+  p {
+    font-size: 1.5em;
+  }
+}
+
+@keyframes loading-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.form-group {
+  margin-bottom: 1em;
+  padding-top: 1.5em;
+  transition: all 0.3s;
+  min-height: 3.5em;
+  position: relative;
+
+  .form-control {
+    font-size: inherit;
+    transition: all 0.5s;
+
+    &::placeholder {
+      color: transparent;
+      box-shadow: none;
+      outline: none;
+      border-color: orange;
+    }
+  }
+
+  .form-label {
+    position: absolute;
+    pointer-events: none;
+    font-size: 1em;
+    color: #aaa;
+    display: block;
+    opacity: 1;
+    transform: translate(0.9em, -1.75em);
+    transform-origin: 0 0;
+    transition: all 0.3s;
+    white-space: nowrap;
+    line-height: 1em;
+  }
+
+  .form-control:focus + .form-label,
+  .form-control:not(:placeholder-shown) + .form-label {
+    transform: translate(0.5em, -4.4em);
+    font-size: 0.8em;
+    color: white;
+  }
+}
+
+.planificado-summary {
+  margin: 1rem 0;
+  display: flex;
+  margin: 0;
+  margin-bottom: 0.5rem;
+  border-radius: 0.5rem;
+  font-size: 1.5em;
+
+  .plan-content {
+    padding: 0.5rem;
+    flex-grow: 1;
+    overflow-x: clip;
+  }
+
+  p {
+    margin: 0;
+    line-height: 1.15em;
+  }
+
+  .edit-button {
+    display: flex;
+    align-items: center;
+  }
+
+  .icons-container {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    @media (min-width: 768px) {
+      flex-direction: row;
+      margin-right: 0.5em;
+    }
+
+    a,
+    button {
+      background-color: transparent;
+      border: none;
+      height: fit-content;
+    }
+
+    img {
+      height: 1.5em;
+    }
+
+    .delete-button {
+      padding: 0;
+      display: block;
+    }
+  }
+
+  .siglas {
+    font-weight: bold;
+    font-size: 1.5em;
+  }
+
+  .tec21-label {
+    margin-left: 4px;
+    margin-right: 4px;
+    margin-top: 14px;
+    height: 0.75em;
+    line-height: 1.5em;
+  }
+}
